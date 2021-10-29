@@ -1,0 +1,294 @@
+:root {
+    --sun-left: calc((5vw - 2em) / 2);
+}
+
+* {
+    transition: all .3s;
+}
+
+body {
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    background-image: linear-gradient(#313131, 10%, #525252);
+    overflow: hidden;
+    cursor: pointer;
+}
+/*A2D2FF B5EAEA*/
+
+.grid {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    perspective: 20em;
+}
+
+.col {
+    /*border: 1px solid red;*/
+    width: 10vw;
+    z-index: 2;
+}
+
+.sun {
+    width: 2em;
+    height: 2em;
+    background-image: radial-gradient(gold, 60%, yellow);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 3em yellow;
+}
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.backdrop.hidden {
+    display: none;
+}
+
+.sun.night {
+    background-image: radial-gradient(gainsboro, 90%, ghostwhite);
+    box-shadow: 0 0 1.5em ghostwhite;
+}
+
+.col1:hover ~ .sun {
+    left: 0;
+}
+.col2:hover ~ .sun {
+    left: calc(5vw + (5vw - 2em) / 2);
+}
+.col3:hover ~ .sun {
+    left: calc(10vw + (5vw - 2em) / 2);
+}
+.col4:hover ~ .sun {
+    left: calc(15vw + (5vw - 2em) / 2);
+}
+.col5:hover ~ .sun {
+    left: calc(20vw + (5vw - 2em) / 2);
+}
+.col6:hover ~ .sun {
+    left: calc(25vw + (5vw - 2em) / 2);
+}
+.col7:hover ~ .sun {
+    left: calc(30vw + (5vw - 2em) / 2);
+}
+.col8:hover ~ .sun {
+    left: calc(35vw + (5vw - 2em) / 2);
+}
+.col9:hover ~ .sun {
+    left: calc(40vw + (5vw - 2em) / 2);
+}
+.col10:hover ~ .sun {
+    left: calc(45vw + (5vw - 2em) / 2);
+}
+.col11:hover ~ .sun {
+    left: calc(50vw + (5vw - 2em) / 2);
+}
+.col12:hover ~ .sun {
+    left: calc(55vw + (5vw - 2em) / 2);
+}
+.col13:hover ~ .sun {
+    left: calc(60vw + (5vw - 2em) / 2);
+}
+.col14:hover ~ .sun {
+    left: calc(65vw + (5vw - 2em) / 2);
+}
+.col15:hover ~ .sun {
+    left: calc(70vw + (5vw - 2em) / 2);
+}
+.col16:hover ~ .sun {
+    left: calc(75vw + (5vw - 2em) / 2);
+}
+.col17:hover ~ .sun {
+    left: calc(80vw + (5vw - 2em) / 2);
+}
+.col18:hover ~ .sun {
+    left: calc(85vw + (5vw - 2em) / 2);
+}
+.col19:hover ~ .sun {
+    left: calc(90vw + (5vw - 2em) / 2);
+}
+.col20:hover ~ .sun {
+    left: calc(100% - 2em);
+}
+
+.platform {
+    width: 90vw;
+    height: 10em;
+    background-image: linear-gradient(gainsboro, 30%, ghostwhite);
+    position: absolute;
+    top: 60%;
+    transform: rotateX(40deg);
+}
+
+.circle {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-image: radial-gradient(circle at top, lawngreen, 75%, black);
+    position: absolute;
+    top: 35%;
+    transform: rotate(-47.5deg)
+}
+/* colors: dark FC5404, light F9B208 */
+
+.col1:hover ~ .circle {
+    /*
+        default value
+        transform: rotate(-45deg);
+    */
+}
+.col2:hover ~ .circle {
+    transform: rotate(-42.5deg);
+}
+.col3:hover ~ .circle {
+    transform: rotate(-37.5deg);
+}
+.col4:hover ~ .circle {
+    transform: rotate(-32.5deg);
+}
+.col5:hover ~ .circle {
+    transform: rotate(-27.5deg);
+}
+.col6:hover ~ .circle {
+    transform: rotate(-22.5deg);
+}
+.col7:hover ~ .circle {
+    transform: rotate(-17.5deg);
+}
+.col8:hover ~ .circle {
+    transform: rotate(-12.5deg);
+}
+.col9:hover ~ .circle {
+    transform: rotate(-7.5deg);
+}
+.col10:hover ~ .circle {
+    transform: rotate(-2.5deg);
+}
+.col11:hover ~ .circle {
+    transform: rotate(2.5deg);
+}
+.col12:hover ~ .circle {
+    transform: rotate(7.5deg);
+}
+.col13:hover ~ .circle {
+    transform: rotate(12.5deg);
+}
+.col14:hover ~ .circle {
+    transform: rotate(17.5deg);
+}
+.col15:hover ~ .circle {
+    transform: rotate(22.5deg);
+}
+.col16:hover ~ .circle {
+    transform: rotate(27.5deg);
+}
+.col17:hover ~ .circle {
+    transform: rotate(32.5deg);
+}
+.col18:hover ~ .circle {
+    transform: rotate(37.5deg);
+}
+.col19:hover ~ .circle {
+    transform: rotate(42.5deg);
+}
+.col20:hover ~ .circle {
+    transform: rotate(47.5deg);
+}
+
+/* to do: тень более реалистичной */
+.shadow {
+    position: absolute;
+    width: 4.3em;
+    height: 4.3em;
+    border-radius: 50%;
+    background-image: radial-gradient(
+        rgba(0, 0, 0, .6) 10%, 
+        rgba(0, 0, 0, .1) 85%,
+        transparent 100%);
+    transform: rotateX(40deg);
+    top: 70%;
+    left: calc(7.5vw + (85vw - 4.1em));
+    box-shadow: 0 0 2em rgba(0, 0, 0, .05);
+}
+
+.shadow.hidden {
+    display: none;
+}
+
+/* (20+1) / 20; 1.1 */
+.col1:hover ~ .shadow {
+    /*
+        default value
+        left: calc(7.5vw + (85vw - 4.1em) * (20/20));
+    */
+}
+.col2:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (18.90/20));
+}
+.col3:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (17.85/20));
+}
+.col4:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (16.8/20));
+}
+.col5:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (15.75/20));
+}
+.col6:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (14.7/20));
+}
+.col7:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (13.65/20));
+}
+.col8:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (12.6/20));
+}
+.col9:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (11.55/20));
+}
+.col10:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (10.5/20));
+}
+.col11:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (9.45/20));
+}
+.col12:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (8.4/20));
+}
+.col13:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (7.35/20));
+}
+.col14:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (6.3/20));
+}
+.col15:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (5.25/20));
+}
+.col16:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (4.2/20));
+}
+.col17:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (3.15/20));
+}
+.col18:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (2.1/20));
+}
+.col19:hover ~ .shadow {
+    left: calc(7.5vw + (85vw - 4.3em) * (1.05/20));
+}
+.col20:hover ~ .shadow {
+    left: calc(7.5vw);
+}
